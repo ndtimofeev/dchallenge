@@ -6,15 +6,34 @@ TEMPLATE    = app
 TARGET      = dchallenge
 
 android {
-    QT      += qml quick
+    QT      += qml quickcontrols2
     SOURCES += src/Android.cpp
+    DISTFILES += \
+        android/AndroidManifest.xml \
+        android/gradle/wrapper/gradle-wrapper.jar \
+        android/gradlew \
+        android/res/values/libs.xml \
+        android/build.gradle \
+        android/gradle/wrapper/gradle-wrapper.properties \
+        android/gradlew.bat \
+        android/AndroidManifest.xml \
+        android/gradle/wrapper/gradle-wrapper.jar \
+        android/gradlew \
+        android/res/values/libs.xml \
+        android/build.gradle \
+        android/gradle/wrapper/gradle-wrapper.properties \
+        android/gradlew.bat
+
+    ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
 } else {
     QT      += widgets
     FORMS   += ui/DChallenge.ui
     SOURCES += src/Main.cpp
 }
-CONFIG      += c++11
+
+CONFIG      += c++14
 INCLUDEPATH += .
 RESOURCES   += qml.qrc
 
 # Input
+

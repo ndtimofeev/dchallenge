@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
+        <file>icon.png</file>
+        <file>qml/Android.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>files/adrenaline.png</file>
         <file>files/veronal.png</file>
