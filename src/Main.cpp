@@ -57,10 +57,7 @@ int main( int argc, char** argv )
         timer.setSingleShot( true );
 
         winState->addTransition( &timer, &QTimer::timeout, gameState );
-        winState->addTransition( ui.pushButton, &QAbstractButton::clicked, gameState );
         loseState->addTransition( &timer, &QTimer::timeout, gameState );
-        loseState->addTransition( ui.pushButton, &QAbstractButton::clicked, gameState );
-//        gameState->assignProperty( ui.pushButton, "visible", false );
 
         QList<QPushButton*> buttons = { ui.pushButton_a, ui.pushButton_b, ui.pushButton_c, ui.pushButton_d };
 
